@@ -1,0 +1,12 @@
+type.detect.grok.IConverter
+type.detect.grok.FloatConverter
+type.detect.grok.BooleanConverter
+type.detect.grok.IntegerConverter
+type.detect.grok.Converter
+type.detect.grok.DateConverter
+type.detect.grok.DoubleConverter
+type.detect.grok.StringConverter
+type.detect.grok.KeyValue
+type.detect.grok.ByteConverter
+type.detect.grok.ShortConverter
+type.detect.grok.LongConverter
