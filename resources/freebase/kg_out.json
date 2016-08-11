@@ -1,0 +1,132 @@
+[{
+        "result": {
+            "image": {
+                "license": "http:\/\/creativecommons.org\/licenses\/by-sa\/2.0",
+                "contentUrl": "http:\/\/t3.gstatic.com\/images?q=tbn:ANd9GcRL9DWotkw62mZopEl8O9Z9ov4uIvcaQ9x7_icH5_G5HwRZVGN5",
+                "url": "https:\/\/en.wikipedia.org\/wiki\/Taylor_Swift"
+            },
+            "detailedDescription": {
+                "license": "https:\/\/en.wikipedia.org\/wiki\/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License",
+                "articleBody": "Taylor Alison Swift is an American singer-songwriter. Raised in Wyomissing, Pennsylvania, she moved to Nashville, Tennessee, at the age of 14 to pursue a career in country music. ",
+                "url": "http:\/\/en.wikipedia.org\/wiki\/Taylor_Swift"
+            },
+            "@type": ["Thing", "Person"],
+            "name": "Taylor Swift",
+            "description": "Singer-songwriter",
+            "@id": "kg:\/m\/0dl567",
+            "url": "http:\/\/taylorswift.com\/"
+        },
+        "@type": "EntitySearchResult",
+        "resultScore": 898.412537
+    }, {
+        "result": {
+            "detailedDescription": {
+                "license": "https:\/\/en.wikipedia.org\/wiki\/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License",
+                "articleBody": "Taylor Swift is the debut studio album by American singer-songwriter Taylor Swift, released on October 24, 2006, by Big Machine Records. Swift was 16 years old at the time of the album's release and wrote its songs during her freshman year of high school. Swift has writing credits on all of the album's songs, including those co-written with Liz Rose. Swift experimented with several producers, ultimately choosing Nathan Chapman, who had produced her demo album. ",
+                "url": "http:\/\/en.wikipedia.org\/wiki\/Taylor_Swift_(album)"
+            },
+            "@type": ["MusicAlbum", "Thing"],
+            "name": "Taylor Swift",
+            "description": "Studio album by Taylor Swift",
+            "@id": "kg:\/m\/03g7rsz"
+        },
+        "@type": "EntitySearchResult",
+        "resultScore": 502.525879
+    }, {
+        "result": {
+            "detailedDescription": {
+                "license": "https:\/\/en.wikipedia.org\/wiki\/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License",
+                "articleBody": "The 2009 MTV Video Music Awards took place on September 13, 2009, at Radio City Music Hall in New York City, honoring the best music videos from June 19, 2008, to June 29, 2009. Comedian Russell Brand hosted the event for the second time in a row. The awards were held a few months after Michael Jackson died. ",
+                "url": "http:\/\/en.wikipedia.org\/wiki\/2009_MTV_Video_Music_Awards"
+            },
+            "@type": ["Event", "Thing"],
+            "name": "2009 MTV Video Music Awards",
+            "description": "Award ceremony",
+            "@id": "kg:\/m\/0z688m1"
+        },
+        "@type": "EntitySearchResult",
+        "resultScore": 355.497253
+    }, {
+        "result": {
+            "detailedDescription": {
+                "license": "https:\/\/en.wikipedia.org\/wiki\/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License",
+                "articleBody": "Fearless is the second studio album by American singer-songwriter Taylor Swift. The album was released on November 11, 2008, by Big Machine Records. As with her debut, Swift wrote or co-wrote all thirteen tracks on Fearless. ",
+                "url": "http:\/\/en.wikipedia.org\/wiki\/Fearless_(Taylor_Swift_album)"
+            },
+            "@type": ["MusicAlbum", "Thing"],
+            "name": "Fearless",
+            "description": "Studio album by Taylor Swift",
+            "@id": "kg:\/m\/04glrxj"
+        },
+        "@type": "EntitySearchResult",
+        "resultScore": 317.876068
+    }, {
+        "result": {
+            "image": {
+                "license": "http:\/\/creativecommons.org\/licenses\/by\/2.0",
+                "contentUrl": "http:\/\/t1.gstatic.com\/images?q=tbn:ANd9GcRfSoM0RKYwAwgzoRFUeoyPwYILSfpV5bBpT2YGIybvJ6p1m2P-",
+                "url": "https:\/\/commons.wikimedia.org\/wiki\/File:Taylor_Swift_Speak_Now_Tour_2011_4.jpg"
+            },
+            "detailedDescription": {
+                "license": "https:\/\/en.wikipedia.org\/wiki\/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License",
+                "articleBody": "Speak Now is the third studio album by American singer-songwriter Taylor Swift. It was released on October 25, 2010, by Big Machine Records. ",
+                "url": "http:\/\/en.wikipedia.org\/wiki\/Speak_Now"
+            },
+            "@type": ["MusicAlbum", "Thing"],
+            "name": "Speak Now",
+            "description": "Studio album by Taylor Swift",
+            "@id": "kg:\/m\/0cmdv8y"
+        },
+        "@type": "EntitySearchResult",
+        "resultScore": 212.09462
+    }, {
+        "result": {
+            "detailedDescription": {
+                "license": "https:\/\/en.wikipedia.org\/wiki\/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License",
+                "articleBody": "The Taylor Swift Holiday Collection - EP, or simply The Taylor Swift Holiday Collection, is the first extended play released by American country recording artist Taylor Swift. ",
+                "url": "http:\/\/en.wikipedia.org\/wiki\/Sounds_of_the_Season:_The_Taylor_Swift_Holiday_Collection"
+            },
+            "@type": ["MusicAlbum", "Thing"],
+            "name": "Sounds of the Season: The Taylor Swift Holiday Collection",
+            "description": "Extended play by Taylor Swift",
+            "@id": "kg:\/m\/03cl661"
+        },
+        "@type": "EntitySearchResult",
+        "resultScore": 162.169693
+    }, {
+        "result": {
+            "@type": ["MusicRecording", "Thing"],
+            "name": "Taylor Swift",
+            "description": "Song by Speedy Ortiz",
+            "@id": "kg:\/m\/0ytlxn7"
+        },
+        "@type": "EntitySearchResult",
+        "resultScore": 141.375931
+    }, {
+        "result": {
+            "@type": ["Movie", "Thing"],
+            "name": "Taylor Swift: Taylor Swift",
+            "description": "2007 film",
+            "@id": "kg:\/m\/0crvk0b"
+        },
+        "@type": "EntitySearchResult",
+        "resultScore": 138.468826
+    }, {
+        "result": {
+            "@type": ["MusicRecording", "Thing"],
+            "name": "Taylor Swift",
+            "description": "Song by Austin Kyle",
+            "@id": "kg:\/m\/0dxf3j9"
+        },
+        "@type": "EntitySearchResult",
+        "resultScore": 137.064377
+    }, {
+        "result": {
+            "@type": ["MusicRecording", "Thing"],
+            "name": "Taylor Swift",
+            "description": "Song by The Ill-Fitting Garibaldis",
+            "@id": "kg:\/m\/0y96wyx"
+        },
+        "@type": "EntitySearchResult",
+        "resultScore": 136.70108
+    }]

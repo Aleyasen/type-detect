@@ -32,7 +32,7 @@ public class FreebaseUtil {
     final private static Properties properties = new Properties();
 
     public static void main(String[] args) {
-        final JSONArray json = search("Propofol", "resources/freebase/type_query.json", 5);
+        final JSONArray json = search("Obama", "resources/freebase/type_query.json", 5);
         System.out.println(json);
 //        Object document = Configuration.defaultConfiguration().getProvider().parse(json.toString());
 
@@ -52,15 +52,15 @@ public class FreebaseUtil {
 //            url.put("filter", "(all type:/music/artist created:\"The Lady Killer\")");
             url.put("limit", limit);
             String mql_query = IOUtils.toString(new FileInputStream(mql_query_file));
-
-            url.put("mql_output", mql_query);
-            url.put("key", properties.get("API_KEY"));
+//            System.out.println(mql_query);
+//            url.put("mql_output", mql_query);
+            url.put("key", properties.get("FB_API_KEY"));
             HttpRequest request = requestFactory.buildGetRequest(url);
             HttpResponse httpResponse = null;
             try {
                 httpResponse = request.execute();
             } catch (Exception e) {
-
+                e.printStackTrace();
             }
             if (httpResponse == null) {
                 return null;
