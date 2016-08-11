@@ -23,6 +23,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 import java.io.FileInputStream;
+import java.util.List;
 import java.util.Properties;
 
 /**
@@ -35,6 +36,25 @@ public class KnowledgeGraphUtil {
     public static Properties properties = new Properties();
 
     public static void main(String[] args) {
+        System.out.println(getType("LogP"));
+    }
+
+    public static String getType(String query) {
+        final JSONArray elements = getResult(query);
+        System.out.println(elements);
+        for (Object element : elements) {
+            List<String> typeArray = JsonPath.read(element, "$.result.@type");
+            for (String type : typeArray) {
+                if (!type.equals("Thing")) {
+                    return type;
+                }
+            }
+        }
+        System.out.println("Empty set");
+        return null;
+    }
+
+    public static JSONArray getResult(String query) {
         try {
             properties.load(new FileInputStream(KG_PROPERTIES_LOC));
 
@@ -42,20 +62,18 @@ public class KnowledgeGraphUtil {
             HttpRequestFactory requestFactory = httpTransport.createRequestFactory();
             JSONParser parser = new JSONParser();
             GenericUrl url = new GenericUrl("https://kgsearch.googleapis.com/v1/entities:search");
-            url.put("query", "Taylor Swift");
-            url.put("limit", "10");
+            url.put("query", query);
+            url.put("limit", "1");
             url.put("indent", "true");
             url.put("key", properties.get("KG_API_KEY"));
             HttpRequest request = requestFactory.buildGetRequest(url);
             HttpResponse httpResponse = request.execute();
             JSONObject response = (JSONObject) parser.parse(httpResponse.parseAsString());
             JSONArray elements = (JSONArray) response.get("itemListElement");
-            System.out.println(elements);
-            for (Object element : elements) {
-                System.out.println(JsonPath.read(element, "$.result.name").toString());
-            }
+            return elements;
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+        return null;
     }
 }

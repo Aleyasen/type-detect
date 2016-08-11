@@ -156,7 +156,7 @@ public class Grok implements Serializable {
      * @param name : Pattern Name
      * @param pattern : Regular expression Or {@code Grok} pattern
      * @throws GrokException runtime expt
-   *
+     *
      */
     public void addPattern(String name, String pattern) throws GrokException {
         if (StringUtils.isBlank(name)) {
@@ -174,7 +174,7 @@ public class Grok implements Serializable {
      *
      * @param cpy : Map to copy
      * @throws GrokException runtime expt
-   *
+     *
      */
     public void copyPatterns(Map<String, String> cpy) throws GrokException {
         if (cpy == null) {
@@ -230,8 +230,6 @@ public class Grok implements Serializable {
             r = new FileReader(f);
             addPatternFromReader(r);
         } catch (FileNotFoundException e) {
-            throw new GrokException(e.getMessage());
-        } catch (@SuppressWarnings("hiding") IOException e) {
             throw new GrokException(e.getMessage());
         } finally {
             try {
