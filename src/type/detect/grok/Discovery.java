@@ -31,6 +31,8 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.google.code.regexp.Matcher;
 import com.google.code.regexp.Pattern;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import type.detect.grok.exception.GrokException;
 
 /**
@@ -118,15 +120,19 @@ public class Discovery {
         // Compile the pattern
         Iterator<Entry<String, String>> it = gPatterns.entrySet().iterator();
         while (it.hasNext()) {
-            @SuppressWarnings("rawtypes")
-            Map.Entry pairs = (Map.Entry) it.next();
-            String key = pairs.getKey().toString();
-            Grok g = new Grok();
+            try {
+                @SuppressWarnings("rawtypes")
+                Map.Entry pairs = (Map.Entry) it.next();
+                String key = pairs.getKey().toString();
+                Grok g = new Grok();
 
-            g.copyPatterns(gPatterns);
-            g.setSaved_pattern(key);
-            g.compile("%{" + key + "}");
-            groks.put(key, g);
+                g.copyPatterns(gPatterns);
+                g.setSaved_pattern(key);
+                g.compile("%{" + key + "}");
+                groks.put(key, g);
+            } catch (GrokException ex) {
+                Logger.getLogger(Discovery.class.getName()).log(Level.SEVERE, null, ex);
+            }
 
         }
 
