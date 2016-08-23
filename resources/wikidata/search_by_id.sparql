@@ -1,0 +1,7 @@
+PREFIX entity: <http://www.wikidata.org/entity/>
+SELECT ?typelabel
+WHERE
+{
+    entity:{{id}} wdt:P31 ?type . 
+    ?type rdfs:label ?typelabel FILTER (LANG(?typelabel)="en") . 
+}

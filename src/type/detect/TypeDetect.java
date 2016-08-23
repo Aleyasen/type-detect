@@ -5,8 +5,10 @@
  */
 package type.detect;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import type.detect.kb.wikidata.WikiDataConsumer;
 
 /**
  *
@@ -25,15 +27,16 @@ public class TypeDetect {
     }
 
     public String besttype(String text) {
-        return null;
+        return WikiDataConsumer.getBestType(text);
     }
 
     public String besttype(List<String> list) {
-        return null;
+        return WikiDataConsumer.getBestType(list);
     }
 
-    public String besttype(Set<String> list) {
-        return null;
+    public String besttype(Set<String> set) {
+        List<String> list = new ArrayList<>(set);
+        return WikiDataConsumer.getBestType(list);
     }
 
 }

@@ -16,7 +16,6 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import net.sf.json.JSON;
-import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import net.sf.json.JSONSerializer;
 import org.apache.commons.io.FileUtils;
@@ -38,6 +37,17 @@ public class IOUtils {
         return lines;
     }
 
+    public static String readFileToString(String file) {
+        String content = null;
+        try {
+            content = FileUtils.readFileToString(new File(file));
+            return content;
+        } catch (IOException ex) {
+            Logger.getLogger(IOUtils.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+
     public static String readUrl(String urlString) {
         BufferedReader reader = null;
         try {
@@ -50,7 +60,7 @@ public class IOUtils {
                 buffer.append(chars, 0, read);
             }
             reader.close();
-            System.out.println(buffer.toString());
+//            System.out.println(buffer.toString());
             return buffer.toString();
         } catch (MalformedURLException ex) {
             Logger.getLogger(IOUtils.class.getName()).log(Level.SEVERE, null, ex);
