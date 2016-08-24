@@ -29,6 +29,7 @@ public class WikiDataConsumer {
     private static final String SEARCH_URL_TEMPLATE = "https://www.wikidata.org/w/api.php?action=wbsearchentities&search={{query}}&language=en&type=item&format=json";
     private static final String SPAPRQL_TYPE_QUERY = IOUtils.readFileToString("resources/wikidata/search_by_id.sparql");
     private static final String SPARQL_URL_TEMPLATE = "https://query.wikidata.org/sparql?format=json&query={{sparql}}";
+    private static final Integer DEFUALT_SEARCH_LIMIT = 3;
 
     public static void main(String[] args) {
 //        final Map<String, Integer> types = getTypes("barack obama");
@@ -52,7 +53,7 @@ public class WikiDataConsumer {
     public static Map<String, Integer> getTypes(String term) {
 
         Map<String, Integer> freq = new HashMap<>();
-        List<WikiDataSearchEntity> results = search(term);
+        List<WikiDataSearchEntity> results = search(term, DEFUALT_SEARCH_LIMIT);
         System.out.println(results);
         for (WikiDataSearchEntity ent : results) {
             final List<String> types = recognizeTypesForID(ent.getId());
@@ -97,6 +98,15 @@ public class WikiDataConsumer {
             Logger.getLogger(WikiDataConsumer.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
+    }
+
+    public static List<WikiDataSearchEntity> search(String query, int limit) {
+        final List<WikiDataSearchEntity> results = search(query);
+        if (results.size() <= limit) {
+            return results;
+        } else {
+            return results.subList(0, limit);
+        }
     }
 
     public static List<WikiDataSearchEntity> search(String query) {
